@@ -12,7 +12,7 @@ def updateCombo(request, id):
     a = model_class.objects.all()
     out = ""
     for b in a:
-        out = "%s<option value='%s'>%s" % (out, unicode(b.id), b,)
+        out = "%s<option value='%s'>%s" % (out, b.id, b,)
     out = "<option></option>"+ out
     return HttpResponse(out)
 
