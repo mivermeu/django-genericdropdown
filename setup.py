@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-genericdropdown',
-    version=0.1,
+    version="0.1",
     description='A simple dropdown the make the hassle of picking to the right object when using generic relations',
     long_description=open('readme.markdown', 'r').read(),
     keywords='django, admin, dropdown',

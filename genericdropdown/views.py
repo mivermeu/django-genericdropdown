@@ -9,9 +9,16 @@ def updateCombo(request, id):
 #    print "appa", model_class
 
     a = model_class.objects.all()
+    use_name = (
+        not model_class._meta.ordering and
+        'name' in [x.name for x in model_class._meta.fields] and
+        model_class._meta.get_field("name").concrete
+    )
+    if use_name :
+        a = a.order_by("name")
     out = ""
     for b in a:
-        out = "%s<option value='%s'>%s" % (out, unicode(b.id), b,)
+        out = "%s<option value='%s'>%s" % (out, b.id, b,)
     out = "<option></option>"+ out
     return HttpResponse(out)
 
