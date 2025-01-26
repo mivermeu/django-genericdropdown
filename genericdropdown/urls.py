@@ -1,6 +1,6 @@
-from django.conf.urls import url
+from django.urls import re_path
 from .views import updateCombo
 
 urlpatterns = [
-    url(r'^updatecombo/(?P<id>\d+)?$', updateCombo, name='updatecombo'),
+    re_path(r'^updatecombo/(?P<id>\d+)?$', updateCombo, name='updatecombo'),
 ]

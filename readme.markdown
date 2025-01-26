@@ -5,8 +5,8 @@ Howto use
 --------
 Just add the url to your url config and you should be fine, and add a line to your template directory setting as well
 
-    url(r'^', include('genericdropdown.urls')),
-    
+    re_path(r'^', include('genericdropdown.urls')),
+
     TEMPLATE_DIRS = (
        'templates/',
        'genericdropdown/templates'
